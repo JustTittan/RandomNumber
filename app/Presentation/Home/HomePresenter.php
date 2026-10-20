@@ -4,7 +4,11 @@ namespace App\Presentation\Home;
 
 use Nette;
 
-
 final class HomePresenter extends Nette\Application\UI\Presenter
 {
+    public function handleGenerateRandomNumber(): void
+    {
+        // Pošle instrukci do JS, aby se překreslil snippet "pleaseReload"
+        $this->redrawControl('pleaseReload');
+    }
 }
